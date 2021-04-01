@@ -2,7 +2,7 @@ import React from 'react';
 
 function GridProduk() {
 
-    return <h1>Halaman GridProduk</h1>
+    return <h1>Halaman Grid Produk</h1>
 }
 
 export default GridProduk;
