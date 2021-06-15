@@ -7,24 +7,30 @@ import Private from './pages/private';
 import Registrasi from './pages/registrasi';
 import PrivateRoute from './components/PrivateRoute';
 import FirebaseProvider from './components/FirebaseProvider';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
+import theme from './config/theme';
 
-function App() {
+export default function App() {
     return (
-        <FirebaseProvider>
-            <Router>
-                <Switch>
-                    <PrivateRoute path="/" exact component={Private} />
-                    <PrivateRoute path="/pengaturan" component={Private} />
-                    <PrivateRoute path="/produk" component={Private} />
-                    <PrivateRoute path="/transaksi" component={Private} />
-                    <Route path="/registrasi" component={Registrasi} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/lupa-password" component={LupaPassword} />
-                    <Route component={NotFound} />
-                </Switch>
-            </Router>
-        </FirebaseProvider>
+        <>
+            <CssBaseline />
+            <ThemeProvider theme={theme}>
+                <FirebaseProvider>
+                    <Router>
+                        <Switch>
+                            <PrivateRoute path="/" exact component={Private} />
+                            <PrivateRoute path="/pengaturan" component={Private} />
+                            <PrivateRoute path="/produk" component={Private} />
+                            <PrivateRoute path="/transaksi" component={Private} />
+                            <Route path="/registrasi" component={Registrasi} />
+                            <Route path="/login" component={Login} />
+                            <Route path="/lupa-password" component={LupaPassword} />
+                            <Route component={NotFound} />
+                        </Switch>
+                    </Router>
+                </FirebaseProvider>
+            </ThemeProvider>
+        </>
     );
 }
-
-export default App;
