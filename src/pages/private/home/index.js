@@ -1,8 +1,14 @@
+import { Button } from '@material-ui/core';
 import React from 'react';
+import { useFirebase } from '../../../components/FirebaseProvider';
 
-function Home() {
+export default function Home() {
 
-    return <h1>Halaman Home</h1>
+    const { auth } = useFirebase();
+
+    return <><h1>Halaman Home</h1>
+        <Button onClick={(e) => {
+            auth.signOut()
+        }} >Sign Out</Button>
+    </>
 }
-
-export default Home;
