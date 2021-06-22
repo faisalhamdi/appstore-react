@@ -4,16 +4,19 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.58",
     "@material-ui/styles": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "firebase": "^8.6.7",
+    "notistack": "^1.0.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-firebase-hooks": "^3.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "validator": "^13.6.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
