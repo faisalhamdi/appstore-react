@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { Container, Paper, Typography, TextField, Grid, Button, Snackbar } from '@material-ui/core';
+import { Container, Paper, Typography, TextField, Grid, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { isEmail } from 'validator';
 import { useFirebase } from '../../components/FirebaseProvider';
-import Alert from '@material-ui/lab/Alert';
 import { useSnackbar } from 'notistack';
 
 const useStyles = makeStyles((theme) => ({
